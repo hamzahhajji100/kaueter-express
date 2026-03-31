@@ -1,4 +1,5 @@
 import ahmedImg from "@/assets/ahmed-hero.png";
+import kuehlhausImg from "@/assets/kuehlhaus.png";
 
 const About = () => {
   return (
@@ -35,6 +36,24 @@ const About = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Kühlhaus */}
+      <div className="max-w-6xl mx-auto mt-16">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-accent/10 rounded-2xl rotate-1" />
+          <img
+            src={kuehlhausImg}
+            alt="Kühlhaus im ABA Frischezentrum Köln"
+            className="relative rounded-2xl shadow-lg w-full object-cover aspect-[16/7]"
+            loading="lazy"
+            width={1200}
+            height={525}
+          />
+        </div>
+        <p className="text-center text-muted-foreground font-body mt-4 text-sm">
+          Unser Kühlhaus im ABA Frischezentrum Köln – täglich frisch bestückt
+        </p>
       </div>
     </section>
   );
