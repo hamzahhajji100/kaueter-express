@@ -8,6 +8,19 @@ import baerlauchImg from "@/assets/baerlauch.png";
 import korianderImg from "@/assets/koriander.png";
 import thymianImg from "@/assets/thymian.png";
 import kurkumaImg from "@/assets/kurkuma.png";
+import estragonImg from "@/assets/estragon.png";
+import liebstoeckelImg from "@/assets/liebstoeckel.png";
+import thaiBasilikumImg from "@/assets/thai-basilikum.png";
+import sauerampferImg from "@/assets/sauerampfer.png";
+import grueneSosseImg from "@/assets/gruene-sosse.png";
+import zitronenthymianImg from "@/assets/zitronenthymian.png";
+import petersilieGlattImg from "@/assets/petersilie-glatt.png";
+import salbeiImg from "@/assets/salbei.png";
+import krausePetersilieImg from "@/assets/krause-petersilie.png";
+import majoranImg from "@/assets/majoran.png";
+import oreganoImg from "@/assets/oregano.png";
+import kresseImg from "@/assets/kresse.png";
+import zitronenmelisseImg from "@/assets/zitronenmelisse.png";
 import { Leaf } from "lucide-react";
 
 const herbs = [
@@ -20,6 +33,19 @@ const herbs = [
   { name: "Bärlauch", image: baerlauchImg },
   { name: "Koriander", image: korianderImg },
   { name: "Thymian", image: thymianImg },
+  { name: "Estragon", image: estragonImg },
+  { name: "Liebstöckel", image: liebstoeckelImg },
+  { name: "Thai-Basilikum", image: thaiBasilikumImg },
+  { name: "Sauerampfer", image: sauerampferImg },
+  { name: "Grüne Soße", image: grueneSosseImg },
+  { name: "Zitronenthymian", image: zitronenthymianImg },
+  { name: "Petersilie glatt", image: petersilieGlattImg },
+  { name: "Salbei", image: salbeiImg },
+  { name: "Krause Petersilie", image: krausePetersilieImg },
+  { name: "Majoran", image: majoranImg },
+  { name: "Oregano", image: oreganoImg },
+  { name: "Kresse", image: kresseImg },
+  { name: "Zitronenmelisse", image: zitronenmelisseImg },
 ];
 
 const categories = [
@@ -60,7 +86,7 @@ const Products = () => {
             <Leaf className="w-5 h-5 text-accent" />
             Unsere Kräuter
           </h3>
-          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4">
             {herbs.map((herb) => (
               <div key={herb.name} className="group text-center">
                 <div className="bg-background rounded-xl p-3 mb-2 transition-all duration-300 hover:shadow-lg">
