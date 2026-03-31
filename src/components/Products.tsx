@@ -19,7 +19,8 @@ import salbeiImg from "@/assets/salbei.png";
 import krausePetersilieImg from "@/assets/krause-petersilie.png";
 import majoranImg from "@/assets/majoran.png";
 import oreganoImg from "@/assets/oregano.png";
-import kresseImg from "@/assets/kresse.png";
+import kresseGruenImg from "@/assets/kresse-gruen.png";
+import kresseRotImg from "@/assets/kresse-rot.png";
 import zitronenmelisseImg from "@/assets/zitronenmelisse.png";
 import { Leaf } from "lucide-react";
 
@@ -44,7 +45,8 @@ const herbs = [
   { name: "Krause Petersilie", image: krausePetersilieImg },
   { name: "Majoran", image: majoranImg },
   { name: "Oregano", image: oreganoImg },
-  { name: "Kresse", image: kresseImg },
+  { name: "Kresse grün", image: kresseGruenImg },
+  { name: "Kresse rot", image: kresseRotImg },
   { name: "Zitronenmelisse", image: zitronenmelisseImg },
 ];
 
