@@ -1,17 +1,34 @@
-import rosmarinImg from "@/assets/rosmarin.png";
-import minzeSalbeiImg from "@/assets/minze-salbei.png";
+import schnittlauchImg from "@/assets/schnittlauch.png";
+import minzeImg from "@/assets/minze.png";
+import rosmarinImg from "@/assets/rosmarin-neu.png";
+import basilikumImg from "@/assets/basilikum.png";
+import pimpinelleImg from "@/assets/pimpinelle.png";
+import dillImg from "@/assets/dill.png";
+import baerlauchImg from "@/assets/baerlauch.png";
+import korianderImg from "@/assets/koriander.png";
+import thymianImg from "@/assets/thymian.png";
 import kurkumaImg from "@/assets/kurkuma.png";
 import { Leaf } from "lucide-react";
+
+const herbs = [
+  { name: "Schnittlauch", image: schnittlauchImg },
+  { name: "Minze", image: minzeImg },
+  { name: "Rosmarin", image: rosmarinImg },
+  { name: "Basilikum", image: basilikumImg },
+  { name: "Pimpinelle", image: pimpinelleImg },
+  { name: "Dill", image: dillImg },
+  { name: "Bärlauch", image: baerlauchImg },
+  { name: "Koriander", image: korianderImg },
+  { name: "Thymian", image: thymianImg },
+];
 
 const categories = [
   {
     title: "Schnittkräuter",
-    image: minzeSalbeiImg,
-    items: ["Basilikum", "Petersilie", "Schnittlauch", "Koriander", "Dill", "Minze", "Salbei", "Estragon", "Bärlauch", "Thymian", "Rosmarin", "Oregano", "Majoran", "Liebstöckel", "Kresse", "Wildkräuter"],
+    items: ["Basilikum", "Petersilie", "Schnittlauch", "Koriander", "Dill", "Minze", "Salbei", "Estragon", "Bärlauch", "Thymian", "Rosmarin", "Oregano", "Majoran", "Liebstöckel", "Kresse", "Pimpinelle", "Wildkräuter"],
   },
   {
     title: "Topfkräuter",
-    image: rosmarinImg,
     items: ["Basilikum", "Rosmarin", "Thymian", "Salbei", "Minze", "Koriander", "Schnittlauch", "Petersilie", "Majoran", "Oregano", "Zitronenmelisse"],
   },
   {
@@ -37,6 +54,32 @@ const Products = () => {
           </p>
         </div>
 
+        {/* Herb photo gallery */}
+        <div className="mb-16">
+          <h3 className="font-display text-2xl font-bold text-foreground mb-6 text-center flex items-center justify-center gap-2">
+            <Leaf className="w-5 h-5 text-accent" />
+            Unsere Kräuter
+          </h3>
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-9 gap-4">
+            {herbs.map((herb) => (
+              <div key={herb.name} className="group text-center">
+                <div className="bg-background rounded-xl p-3 mb-2 transition-all duration-300 hover:shadow-lg">
+                  <img
+                    src={herb.image}
+                    alt={herb.name}
+                    className="w-full aspect-square object-contain group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                    width={200}
+                    height={200}
+                  />
+                </div>
+                <span className="text-sm font-body font-medium text-foreground">{herb.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Category cards */}
         <div className="grid md:grid-cols-3 gap-8">
           {categories.map((cat) => (
             <div
@@ -46,16 +89,6 @@ const Products = () => {
               onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "var(--card-shadow-hover)")}
               onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "var(--card-shadow)")}
             >
-              <div className="overflow-hidden">
-                <img
-                  src={cat.image}
-                  alt={cat.title}
-                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy"
-                  width={600}
-                  height={400}
-                />
-              </div>
               <div className="p-6">
                 <h3 className="font-display text-2xl font-bold text-foreground mb-4 flex items-center gap-2">
                   <Leaf className="w-5 h-5 text-accent" />
