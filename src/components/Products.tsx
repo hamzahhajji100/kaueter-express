@@ -47,6 +47,7 @@ const herbs = [
   { name: "Oregano", image: oreganoImg },
   { name: "Kresse grün", image: kresseGruenImg },
   { name: "Kresse rot", image: kresseRotImg },
+  { name: "Zitronenmelisse", image: zitronenmelisseImg },
 ];
 
 const categories = [
