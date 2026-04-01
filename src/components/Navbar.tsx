@@ -14,8 +14,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary/90 backdrop-blur-md border-b border-primary-foreground/10">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-        <a href="#" className="font-display text-2xl font-bold text-primary-foreground">
-          Kräuter<span className="text-accent">Express</span>
+        <a href="#" className="flex items-center gap-2">
+          <img src={logoImg} alt="Kräuter Express Logo" className="h-10 object-contain" />
         </a>
 
         {/* Desktop */}
