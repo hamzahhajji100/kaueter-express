@@ -1,9 +1,10 @@
 import heroBg from "@/assets/hero-bg.jpg";
-import { Phone, Mail, MapPin } from "lucide-react";
+import logoImg from "@/assets/logo.png";
+import { Phone, Mail } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <img
         src={heroBg}
         alt="Frische Kräuter"
@@ -16,27 +17,34 @@ const Hero = () => {
         style={{ background: "var(--hero-overlay)" }}
       />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        <p className="text-primary-foreground/70 font-body uppercase tracking-[0.3em] text-sm mb-6 animate-fade-in">
+        {/* Logo prominent */}
+        <div className="mb-8 animate-fade-in">
+          <img
+            src={logoImg}
+            alt="Kräuter Express"
+            className="mx-auto w-72 md:w-96 lg:w-[28rem] drop-shadow-2xl"
+          />
+        </div>
+
+        <p className="text-primary-foreground/70 font-body uppercase tracking-[0.3em] text-sm mb-4 animate-fade-in" style={{ animationDelay: "0.15s" }}>
           Seit 2009 · Köln
         </p>
-        <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-primary-foreground mb-6 animate-fade-up leading-tight">
-          Kräuter
-          <span className="block text-accent">Express</span>
-        </h1>
-        <p className="text-primary-foreground/80 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+
+        <p className="text-primary-foreground/85 text-lg md:text-xl font-body max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: "0.3s" }}>
           Ihr Spezialist für frische Schnitt- und Topfkräuter am ABA Frischezentrum Köln-Gremberghoven
         </p>
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.4s" }}>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-up" style={{ animationDelay: "0.45s" }}>
           <a
             href="tel:+491777457395"
-            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-lg font-body font-semibold text-lg hover:brightness-110 transition-all"
+            className="inline-flex items-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-full font-body font-bold text-lg hover:brightness-110 hover:scale-105 transition-all shadow-lg"
           >
             <Phone className="w-5 h-5" />
             Jetzt anrufen
           </a>
           <a
             href="mailto:Kraeuter.express@yahoo.de"
-            className="inline-flex items-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-lg font-body font-semibold text-lg hover:bg-primary-foreground/10 transition-all"
+            className="inline-flex items-center gap-2 border-2 border-primary-foreground/30 text-primary-foreground px-8 py-4 rounded-full font-body font-semibold text-lg hover:bg-primary-foreground/10 transition-all"
           >
             <Mail className="w-5 h-5" />
             E-Mail senden
