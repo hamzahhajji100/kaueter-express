@@ -1,3 +1,5 @@
+import logoImg from "@/assets/logo.jpg";
+
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background/60 py-12 px-6">
