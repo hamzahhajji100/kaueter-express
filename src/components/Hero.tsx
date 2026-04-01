@@ -18,11 +18,19 @@ const Hero = () => {
       />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         {/* Logo prominent */}
-        <div className="mb-8 animate-fade-in">
+        <div className="mb-8 animate-fade-in relative">
+          {/* Warm glow behind logo */}
+          <div
+            className="absolute inset-0 mx-auto w-64 md:w-80 lg:w-96 h-24 md:h-32 top-1/2 -translate-y-1/2 rounded-full blur-3xl opacity-40"
+            style={{ background: "radial-gradient(ellipse, hsl(42, 85%, 52%) 0%, hsl(145, 45%, 22%) 60%, transparent 100%)" }}
+          />
           <img
             src={logoImg}
             alt="Kräuter Express"
-            className="mx-auto w-72 md:w-96 lg:w-[28rem] drop-shadow-2xl"
+            className="relative mx-auto w-72 md:w-96 lg:w-[28rem]"
+            style={{
+              filter: "drop-shadow(0 0 30px hsla(42, 85%, 52%, 0.4)) drop-shadow(0 4px 20px hsla(0, 0%, 0%, 0.5))",
+            }}
           />
         </div>
 
