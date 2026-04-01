@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logoImg from "@/assets/logo.jpg";
 
 const navLinks = [
   { label: "Sortiment", href: "#sortiment" },
