@@ -22,6 +22,8 @@ import oreganoImg from "@/assets/oregano.png";
 import kresseGruenImg from "@/assets/kresse-gruen.png";
 import kresseRotImg from "@/assets/kresse-rot.png";
 import zitronenmelisseImg from "@/assets/zitronenmelisse.png";
+import kerbelImg from "@/assets/kerbel.png";
+import beifussImg from "@/assets/beifuss.png";
 import { Leaf } from "lucide-react";
 
 const herbs = [
