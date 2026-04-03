@@ -1,5 +1,5 @@
 import ahmedImg from "@/assets/ahmed-hero.png";
-import kuehlhausImg from "@/assets/kuehlhaus.png";
+import teamImg from "@/assets/team.jpeg";
 
 const About = () => {
   return (
