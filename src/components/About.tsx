@@ -1,5 +1,5 @@
 import ahmedImg from "@/assets/ahmed-hero.png";
-import kuehlhausImg from "@/assets/kuehlhaus.png";
+import teamImg from "@/assets/team.jpeg";
 
 const About = () => {
   return (
@@ -38,22 +38,36 @@ const About = () => {
         </div>
       </div>
 
-      {/* Kühlhaus */}
-      <div className="max-w-6xl mx-auto mt-16">
+      {/* Team */}
+      <div className="max-w-6xl mx-auto mt-20 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p className="text-accent font-body font-semibold uppercase tracking-widest text-sm mb-3">
+            Unser Team
+          </p>
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+            Gemeinsam für
+            <span className="block text-primary">beste Qualität</span>
+          </h3>
+          <div className="space-y-4 text-muted-foreground font-body text-lg leading-relaxed">
+            <p>
+              Hinter Kräuter Express steht ein engagiertes Team, das jeden Morgen früh aufsteht, um frische Kräuter in Spitzenqualität zu liefern. Ob langjährige Mitarbeiter oder treue Kunden – bei uns zählt der persönliche Kontakt.
+            </p>
+            <p>
+              Vertrauen, Herzlichkeit und Leidenschaft für frische Kräuter – das verbindet uns alle. Wir sind stolz auf die Beziehungen, die wir über die Jahre aufgebaut haben.
+            </p>
+          </div>
+        </div>
         <div className="relative">
-          <div className="absolute -inset-4 bg-accent/10 rounded-2xl rotate-1" />
+          <div className="absolute -inset-4 bg-accent/10 rounded-2xl rotate-2" />
           <img
-            src={kuehlhausImg}
-            alt="Kühlhaus im ABA Frischezentrum Köln"
-            className="relative rounded-2xl shadow-lg w-full object-cover aspect-[16/7]"
+            src={teamImg}
+            alt="Das Kräuter Express Team mit Kunden im Frischezentrum"
+            className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
             loading="lazy"
-            width={1200}
-            height={525}
+            width={800}
+            height={600}
           />
         </div>
-        <p className="text-center text-muted-foreground font-body mt-4 text-sm">
-          Unser Kühlhaus im ABA Frischezentrum Köln – täglich frisch bestückt
-        </p>
       </div>
     </section>
   );
