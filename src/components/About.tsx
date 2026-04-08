@@ -1,5 +1,6 @@
 import ahmedImg from "@/assets/ahmed-hero.png";
 import teamImg from "@/assets/team.jpeg";
+import teamKundenImg from "@/assets/team-kunden.jpeg";
 
 const About = () => {
   return (
