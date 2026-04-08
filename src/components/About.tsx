@@ -70,6 +70,38 @@ const About = () => {
           />
         </div>
       </div>
+
+      {/* Mitarbeiter & Kunden */}
+      <div className="max-w-6xl mx-auto mt-20 grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative">
+          <div className="absolute -inset-4 bg-accent/10 rounded-2xl -rotate-2" />
+          <img
+            src={teamKundenImg}
+            alt="Kräuter Express Mitarbeiter mit langjährigen zufriedenen Kunden"
+            className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
+            loading="lazy"
+            width={800}
+            height={600}
+          />
+        </div>
+        <div>
+          <p className="text-accent font-body font-semibold uppercase tracking-widest text-sm mb-3">
+            Unsere Kunden
+          </p>
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
+            Langjährige Partnerschaften,
+            <span className="block text-primary">echtes Vertrauen</span>
+          </h3>
+          <div className="space-y-4 text-muted-foreground font-body text-lg leading-relaxed">
+            <p>
+              Bei Kräuter Express sind Kunden keine Nummern – sie sind Teil der Familie. Viele unserer Geschäftspartner begleiten uns seit Jahren und schätzen die persönliche Beratung, die gleichbleibend hohe Qualität und den ehrlichen Umgang.
+            </p>
+            <p>
+              Dieses Bild zeigt, was uns ausmacht: Mitarbeiter und langjährige Kunden Seite an Seite – zufrieden, verbunden und mit einem gemeinsamen Ziel: die besten Kräuter auf den Tisch zu bringen.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
