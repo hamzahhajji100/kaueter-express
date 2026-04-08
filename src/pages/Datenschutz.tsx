@@ -40,7 +40,7 @@ const Datenschutz = () => {
             </p>
             <p>
               Telefon: +49 177 745 7395<br />
-              E-Mail: Kraeuter.express@yahoo.de
+              E-Mail: info@kraeuterexpress.com
             </p>
           </section>
 

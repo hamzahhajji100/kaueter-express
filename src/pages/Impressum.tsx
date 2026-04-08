@@ -37,7 +37,7 @@ const Impressum = () => {
             <h2 className="font-display text-xl font-bold text-foreground mt-8 mb-3">Kontakt</h2>
             <p>
               Telefon: +49 177 745 7395<br />
-              E-Mail: Kraeuter.express@yahoo.de
+              E-Mail: info@kraeuterexpress.com
             </p>
           </section>
 
