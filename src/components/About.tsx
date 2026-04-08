@@ -1,6 +1,32 @@
 import ahmedImg from "@/assets/ahmed-hero.png";
 import teamImg from "@/assets/team.jpeg";
-import teamKundenImg from "@/assets/team-kunden.jpeg";
+import microgreensImg from "@/assets/markt-microgreens.png";
+import schnittkraeuterImg from "@/assets/markt-schnittkraeuter.png";
+import verpacktImg from "@/assets/markt-verpackt.png";
+import kuehlhausImg from "@/assets/markt-kuehlhaus.png";
+
+const marketImages = [
+  {
+    src: microgreensImg,
+    alt: "Frische Microgreens in verschiedenen Sorten",
+    caption: "Microgreens – klein, aber voller Geschmack",
+  },
+  {
+    src: schnittkraeuterImg,
+    alt: "Frisch geschnittene Kräuter bereit zur Auslieferung",
+    caption: "Handverlesen & erntefrisch verpackt",
+  },
+  {
+    src: verpacktImg,
+    alt: "Etikettierte Kräuterpackungen in Transportkisten",
+    caption: "Sorgfältig sortiert für unsere Kunden",
+  },
+  {
+    src: kuehlhausImg,
+    alt: "Kräuter im Kühlhaus bereit für den Versand",
+    caption: "Kühlkette garantiert – von uns bis zu dir",
+  },
+];
 
 const About = () => {
   return (
@@ -71,35 +97,35 @@ const About = () => {
         </div>
       </div>
 
-      {/* Mitarbeiter & Kunden */}
-      <div className="max-w-6xl mx-auto mt-20 grid md:grid-cols-2 gap-16 items-center">
-        <div className="relative">
-          <div className="absolute -inset-4 bg-accent/10 rounded-2xl -rotate-2" />
-          <img
-            src={teamKundenImg}
-            alt="Kräuter Express Mitarbeiter mit langjährigen zufriedenen Kunden"
-            className="relative rounded-2xl shadow-lg w-full object-cover aspect-[4/3]"
-            loading="lazy"
-            width={800}
-            height={600}
-          />
-        </div>
-        <div>
+      {/* Einblicke vom Markt */}
+      <div className="max-w-6xl mx-auto mt-24">
+        <div className="text-center mb-12">
           <p className="text-accent font-body font-semibold uppercase tracking-widest text-sm mb-3">
-            Unsere Kunden
+            Frisch vom Markt
           </p>
-          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6 leading-tight">
-            Langjährige Partnerschaften,
-            <span className="block text-primary">echtes Vertrauen</span>
+          <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground leading-tight">
+            Einblicke in unseren
+            <span className="text-primary"> Alltag</span>
           </h3>
-          <div className="space-y-4 text-muted-foreground font-body text-lg leading-relaxed">
-            <p>
-              Bei Kräuter Express sind Kunden keine Nummern – sie sind Teil der Familie. Viele unserer Geschäftspartner begleiten uns seit Jahren und schätzen die persönliche Beratung, die gleichbleibend hohe Qualität und den ehrlichen Umgang.
-            </p>
-            <p>
-              Dieses Bild zeigt, was uns ausmacht: Mitarbeiter und langjährige Kunden Seite an Seite – zufrieden, verbunden und mit einem gemeinsamen Ziel: die besten Kräuter auf den Tisch zu bringen.
-            </p>
-          </div>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {marketImages.map((img, i) => (
+            <div key={i} className="group relative overflow-hidden rounded-2xl shadow-md">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-105"
+                loading="lazy"
+                width={400}
+                height={533}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <p className="text-white font-body text-sm font-medium leading-snug">
+                  {img.caption}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
